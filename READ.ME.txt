@@ -1,0 +1,18 @@
+Tempos de cada execução com:
+1. 1 thread:
+ - versão mutex: 2.101614 s 
+ - versão rwlock: 2.113057 s
+ - minha versão: 2.129113 s
+
+2. 2 threads:
+ - versão mutex: 10.361558 s
+ - versão rwlock: 11.867046 s
+ - minha versão: 10.553379 s
+
+3. 4 threads:
+ - versão mutex: 18.576972 s
+ - versão rwlock: 21.849761 s
+ - minha versão:  18.051414 s
+
+Analise: Como podemos ver, todos tiveram a mesma performance de tempo basicamente, somente com 4 threads que a versão com rwlock demorou um pouco mais que no caso foi quase 3 segundos. Mas em geral, todos demonstraram o mesmo poder de execução, embora sabemos teoricamente que deveríamos ter uma melhora de tempo da versão mutex com as outras, já que nas outras temos um compartilhamento da tarefa de leitura o que otimizaria o processo, porém isso não se demonstrou nos tempos na prática da experiência.
+ 
