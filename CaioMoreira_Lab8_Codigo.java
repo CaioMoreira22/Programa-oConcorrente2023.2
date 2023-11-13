@@ -6,8 +6,6 @@
 import java.util.LinkedList;
 
 //-------------------------------------------------------------------------------
-//Classe que define um pool de threads 
-//!!! Documentar essa classe !!!
 class FilaTarefas {
     private final int nThreads;
     private final MyPoolThreads[] threads;
@@ -62,8 +60,6 @@ class FilaTarefas {
     } 
 }
 //-------------------------------------------------------------------------------
-
-//--PASSO 1: cria uma classe que implementa a interface Runnable 
 class VerificadorPrimos implements Runnable {
     private long number;
     private static int contadorPrimos = 0; // Contador compartilhado entre as threads
