@@ -6,6 +6,7 @@
 from multiprocessing.pool import Pool
 import time
 import math
+import sys
 
 def task(x):
     if(x<=1):
@@ -20,7 +21,7 @@ def task(x):
     return 1
 
 if __name__ == '__main__':
-    n = 10000000 #até onde vai o intervalo desejado
+    n = int(sys.argv[1])
     pool = Pool() 
 
     numbers = list(range(n))
